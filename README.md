@@ -1,15 +1,15 @@
 # Ashok Burasiya — Portfolio
 
-Personal portfolio for Ashok Burasiya, a Senior/Agile Business Analyst and Data & Automation professional with 12+ years of IT experience.
+Personal portfolio for Ashok Burasiya, an AI Product Manager with 12+ years of enterprise delivery experience, specializing in AI strategy, data products, and automation.
 
 ## Focus
 
-- Business analysis and Agile delivery
-- Data & BI: Power BI, Snowflake, Data Mesh and Data Products
-- Automation: Power Apps, Power Automate and SharePoint
-- Enterprise collaboration: Azure DevOps, Microsoft Teams and Planner
-- Transition toward AI Product Manager / Product Owner roles
-- Enterprise Life Sciences experience
+- **AI Product Management**: AI opportunity identification, business case development, product strategy & roadmapping, technical scoping, and enterprise AI execution
+- **AI & ML Fundamentals**: LLM capabilities and limitations, prompt engineering, fine-tuning, RAG approaches, model evaluation, and production ML challenges
+- **Data & Analytics**: Data products, Power BI, Snowflake, Data Mesh, and analytics strategy
+- **Enterprise Automation**: Power Apps, Power Automate, SharePoint, and workflow platforms
+- **Leadership & Execution**: Cross-functional collaboration, agile delivery, stakeholder management, and change leadership
+- **Enterprise Life Sciences & Financial Services**: Deep domain experience in regulated, complex organizational environments
 
 ## Local preview
 
