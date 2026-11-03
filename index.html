@@ -176,40 +176,124 @@
 
     <section id="projects" class="section section-alt">
       <div class="container">
-        <div class="section-heading"><p class="eyebrow">05 · Work & Case Studies</p><h2>AI products, data solutions, and process transformations that drove measurable results.</h2></div>
-        <div class="project-grid">
-          <article class="project-card featured">
-            <p class="project-type">AI Product Case Study</p>
-            <h3>Enterprise L1 Support AI Agent</h3>
-            <p>Built an LLM-powered AI support assistant for enterprise ticketing; automated 35% of L1 volume and reduced average resolution time from 4 hours to under 15 minutes.</p>
-          </article>
-          <article class="project-card">
-            <p class="project-type">AI PM Capstone · Public Sector AI</p>
-            <h3>BenefitBridge</h3>
-            <p>Many households qualify for public support after a job loss, a birth or a bereavement but never claim it. BenefitBridge is a proactive entitlement agent that finds them and hands a caseworker a pre-filled application and a draft message to approve. AI reads letters, notes and messages in any language and must quote its source for every fact; plain-code rules decide eligibility and cite the clause; a caseworker approves every message. North Star: share of eligible households enrolled within 30 days, from 21% today to 45% in the pilot and 60% at rollout, against $160,770 a year left unclaimed. Live evals: 98.7% fact recall, 100% eligibility precision and recall, zero safety failures, at about $132 a month (Groq gpt-oss-120b with Claude as backup). Full AI PM package: user research, AI opportunity map, PRD with North Star metric, cost model, Next.js prototype and deck.</p>
-            <p><a href="https://benefitbridge-one.vercel.app" style="color:var(--accent)">Live demo</a> · <a href="https://github.com/ashokburasiya93/benefitbridge" style="color:var(--accent)">Repo &amp; deliverables</a> · <a href="https://miro.com/app/board/uXjVEVr2G-M=/?share_link_id=783156918261" style="color:var(--accent)">AI opportunity map (Miro)</a></p>
-          </article>
-          <article class="project-card">
-            <p class="project-type">AI PM Capstone · FinOps AI</p>
-            <h3>CloudBill Detective</h3>
-            <p>Cost tools tell you the cloud bill went up. CloudBill Detective tells you which change caused it, who owns it, and the fix to approve. It joins AWS billing with the change log (deploys, Terraform, CloudTrail) to explain every sustained cost change with evidence, splits usage from price, routes each case to an owner and drafts a read-only fix for human approval. Every number in AI-written text is fact-checked, and 12 launch evals run as a build gate. Full AI PM package: user research, AI opportunity map, PRD with North Star metric, cost model and deck.</p>
-            <p><a href="https://cloudbill-detective.vercel.app" style="color:var(--accent)">Live demo</a> · <a href="https://github.com/ashokburasiya93/cloudbill-detective" style="color:var(--accent)">Repo &amp; deliverables</a> · <a href="https://miro.com/app/board/uXjVEWxYEbc=/?share_link_id=429785444469" style="color:var(--accent)">AI opportunity map (Miro)</a></p>
-          </article>
-          <article class="project-card">
-            <p class="project-type">AI Knowledge Assistant</p>
-            <h3>RAG Knowledge Assistant with LLM Evaluation</h3>
-            <p>Designed and launched a RAG assistant with groundedness, relevance, and hallucination tracking, improving answer accuracy from 70% to 88% for 500+ users.</p>
-          </article>
-          <article class="project-card">
-            <p class="project-type">Sales Enablement AI</p>
-            <h3>AI Sales & CRM Assistant</h3>
-            <p>Created an AI workflow to summarize calls, draft follow-ups, and update CRM records—saving reps 10 hours per week and improving lead-to-opportunity conversion by 8%.</p>
-          </article>
-          <article class="project-card">
-            <p class="project-type">Business Analytics</p>
-            <h3>Sales Forecasting & Dashboarding</h3>
-            <p>Built sales dashboards and forecasting models that improved forecast accuracy from 85% to 91% and enabled better stock allocation decisions.</p>
-          </article>
+        <div class="section-heading"><p class="eyebrow">05 · Work &amp; Case Studies</p><h2>AI products designed end to end, from user research to a working, evaluated prototype.</h2></div>
+
+        <div class="project-group">
+          <div class="group-label">
+            <h3>Case studies on GitHub</h3>
+            <p>Each capstone repo holds the full AI PM package: user research, AI opportunity map, PRD with a North Star metric, cost model, working prototype with evals, and deck. All data is synthetic.</p>
+          </div>
+          <div class="project-grid cases">
+            <article class="project-card featured">
+              <p class="project-type">AI PM Capstone · Public Sector AI</p>
+              <h3>BenefitBridge</h3>
+              <p>A proactive entitlement agent. It finds households that now qualify for support after a job loss, a birth or a bereavement but haven't claimed it, and hands a caseworker a pre-filled application and a draft message to approve. AI reads, rules decide, people approve.</p>
+              <ul class="metrics" aria-label="Key numbers">
+                <li>Enrolled in 30 days: 21% → 60% target</li>
+                <li>98.7% fact recall</li>
+                <li>100% eligibility precision &amp; recall</li>
+                <li>≈ $132 / month</li>
+              </ul>
+              <p class="stack">Next.js · Groq gpt-oss-120b · Claude backup · rules engine</p>
+              <p class="project-links"><a href="https://benefitbridge-one.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a><a href="https://github.com/ashokburasiya93/benefitbridge" target="_blank" rel="noopener noreferrer">Repo &amp; deliverables ↗</a><a href="https://miro.com/app/board/uXjVEVr2G-M=/?share_link_id=783156918261" target="_blank" rel="noopener noreferrer">Opportunity map ↗</a></p>
+            </article>
+
+            <article class="project-card">
+              <p class="project-type">AI PM Capstone · FinOps AI</p>
+              <h3>CloudBill Detective</h3>
+              <p>Cost tools say the cloud bill went up; this says which change caused it. It joins AWS billing with the change log (deploys, Terraform, CloudTrail), explains every sustained cost change with evidence, routes it to an owner and drafts a read-only fix for approval.</p>
+              <ul class="metrics" aria-label="Key numbers">
+                <li>$58.9k / month avoidable spend traced to 6 causes</li>
+                <li>Explained in 48h: 0% → 80% target</li>
+                <li>12 / 12 launch evals gate every build</li>
+              </ul>
+              <p class="stack">Node.js · cost engine + Claude explanations · fact-checked output</p>
+              <p class="project-links"><a href="https://cloudbill-detective.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a><a href="https://github.com/ashokburasiya93/cloudbill-detective" target="_blank" rel="noopener noreferrer">Repo &amp; deliverables ↗</a><a href="https://miro.com/app/board/uXjVEWxYEbc=/?share_link_id=429785444469" target="_blank" rel="noopener noreferrer">Opportunity map ↗</a></p>
+            </article>
+
+            <article class="project-card">
+              <p class="project-type">AI PM Capstone · Telecom Support</p>
+              <h3>NovaCell AI Support Assistant</h3>
+              <p>A self-serve chat assistant for a 4M-subscriber mobile operator. It answers Tier-1 questions only from verified sources (FAQ, resolved tickets, technical guide, plan catalogue), shows its sources, and hands off to a live agent when it can't verify an answer.</p>
+              <ul class="metrics" aria-label="Key numbers">
+                <li>Verified self-resolution: 40% pilot target</li>
+                <li>Safety &amp; grounding 100% on every eval set</li>
+                <li>≈ $76 / month at 5,000 contacts a day</li>
+              </ul>
+              <p class="stack">Node.js · Groq gpt-oss-120b · fallback model chain</p>
+              <p class="project-links"><a href="https://novacell-support-assistant.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a><a href="https://github.com/ashokburasiya93/novacell-ai-support-assistant" target="_blank" rel="noopener noreferrer">Repo &amp; deliverables ↗</a><a href="https://miro.com/app/board/uXjVESvQ1ow=/" target="_blank" rel="noopener noreferrer">Opportunity map ↗</a></p>
+            </article>
+
+            <article class="project-card">
+              <p class="project-type">AI PM Capstone · HR &amp; Employee Experience</p>
+              <h3>AskHR: HR Policy Assistant</h3>
+              <p>About 2,500 policy questions a month reach 12 HR partners across India, the UK and the US. AskHR answers routine leave, pay, benefits and travel questions in Teams for the employee's own country, grade and contract, links the exact policy section, and routes anything personal or sensitive to a named HR team.</p>
+              <ul class="metrics" aria-label="Key numbers">
+                <li>Self-resolved: 0% → 60% by month 6</li>
+                <li>Held-out evals 20 / 22, guardrails 100%</li>
+                <li>≈ $152 / month all-in</li>
+              </ul>
+              <p class="stack">Node.js · Grok → Groq → Claude fallback chain</p>
+              <p class="project-links"><a href="https://askhr-policy-assistant.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a><a href="https://github.com/ashokburasiya93/askhr-hr-policy-assistant" target="_blank" rel="noopener noreferrer">Repo &amp; deliverables ↗</a><a href="https://miro.com/app/board/uXjVEVax9d0=/?share_link_id=937627272116" target="_blank" rel="noopener noreferrer">Opportunity map ↗</a></p>
+            </article>
+
+            <article class="project-card">
+              <p class="project-type">AI PM Capstone · Sales &amp; CRM</p>
+              <h3>AtliQ Sales &amp; CRM Assistant</h3>
+              <p>AtliQ doesn't lack leads; it lacks memory. The assistant reads inboxes and meeting notes, builds a cited ledger of what is owed to whom and by when, gives each seller a ranked daily brief, and proposes CRM updates and reply drafts that a person approves.</p>
+              <ul class="metrics" aria-label="Key numbers">
+                <li>Commitments kept on time: 41% → 80%+</li>
+                <li>Every item quotes its source</li>
+                <li>≈ $47 / month for 4 sellers</li>
+              </ul>
+              <p class="stack">Next.js 15 · Groq gpt-oss-120b · Claude backup</p>
+              <p class="project-links"><a href="https://atliq-sales-and-crm-assistant.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a><a href="https://github.com/ashokburasiya93/atliq-sales-and-crm-assistant" target="_blank" rel="noopener noreferrer">Repo &amp; deliverables ↗</a><a href="https://miro.com/app/board/uXjVEfaAWpg=/" target="_blank" rel="noopener noreferrer">Opportunity map ↗</a><a href="https://www.loom.com/share/cad82b3eae044d318e691b96f9838eaf" target="_blank" rel="noopener noreferrer">Demo video ↗</a></p>
+            </article>
+
+            <article class="project-card">
+              <p class="project-type">AI Product Strategy · MAANG Series</p>
+              <h3>AI Opportunity Decks</h3>
+              <p>Five AI opportunity analyses written as a product owner: each company's business from its latest results, three AI features with the data and metrics they need, Reach × Impact × Confidence ÷ Effort scoring, and an MVP blueprint for the feature to build first.</p>
+              <ul class="metrics" aria-label="Build-first feature per company">
+                <li>Meta · LiftLens</li>
+                <li>Apple · Upgrade Concierge</li>
+                <li>Amazon · Fit Twin</li>
+                <li>Netflix · Couch Consensus</li>
+                <li>Google · Pay-per-Task Ads</li>
+              </ul>
+              <p class="stack">Q3 2026 results · sources in speaker notes</p>
+              <p class="project-links"><a href="https://github.com/ashokburasiya93/AI-Opportunity" target="_blank" rel="noopener noreferrer">Repo &amp; decks ↗</a></p>
+            </article>
+          </div>
+        </div>
+
+        <div class="project-group">
+          <div class="group-label">
+            <h3>At work · Capgemini &amp; Samsung</h3>
+            <p>Results from products shipped in enterprise roles.</p>
+          </div>
+          <div class="project-grid">
+            <article class="project-card compact">
+              <p class="project-type">AI Support Agent</p>
+              <h3>Enterprise L1 Support AI Agent</h3>
+              <p>LLM-powered support agent for enterprise ticketing: automated 35% of L1 volume and cut average resolution time from 4 hours to under 15 minutes.</p>
+            </article>
+            <article class="project-card compact">
+              <p class="project-type">AI Knowledge Assistant</p>
+              <h3>RAG Assistant with LLM Evaluation</h3>
+              <p>RAG assistant with groundedness, relevance and hallucination tracking; raised answer accuracy from 70% to 88% for 500+ users.</p>
+            </article>
+            <article class="project-card compact">
+              <p class="project-type">Sales Enablement AI</p>
+              <h3>AI Sales &amp; CRM Assistant</h3>
+              <p>Summarizes calls, drafts follow-ups and updates CRM records, saving reps 10 hours a week and lifting lead-to-opportunity conversion by 8%.</p>
+            </article>
+            <article class="project-card compact">
+              <p class="project-type">Business Analytics</p>
+              <h3>Sales Forecasting &amp; Dashboards</h3>
+              <p>Dashboards and forecasting models that improved forecast accuracy from 85% to 91% and informed stock allocation.</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
