@@ -179,13 +179,17 @@
         <div class="section-heading">
           <p class="eyebrow">05 · Work &amp; Case Studies</p>
           <h2>AI products shipped at work and built end to end, each tied to a measurable result.</h2>
-          <p class="section-note">Projects with a live demo run on synthetic data; their GitHub repos hold the full package: user research, AI opportunity map, PRD with a North Star metric, cost model, evaluated prototype and deck.</p>
+          <p class="section-note">Grouped by type of AI product. Projects with a live demo run on synthetic data, and each one was built end to end: user research, AI opportunity map, PRD with a North Star metric, cost model, evaluated prototype and deck.</p>
         </div>
-        <div class="project-grid cases">
+        <nav class="case-nav" aria-label="Case study categories"><a href="#agents">AI Agents</a><a href="#rag">RAG &amp; Grounded Assistants</a><a href="#fine-tuning">Fine-tuning</a><a href="#ml">ML &amp; Analytics</a><a href="#strategy">AI Product Strategy</a></nav>
+        <div class="case-group" id="agents">
+          <h3 class="group-title">AI Agents</h3>
+          <p class="group-note">Agents that read data, call tools and act, with people approving anything that changes a record.</p>
+          <div class="project-grid cases">
           <article class="project-card featured">
             <div class="feature-main">
               <p class="project-type">Public Sector AI</p>
-              <h3>BenefitBridge</h3>
+              <h4>BenefitBridge</h4>
               <p>A proactive entitlement agent. It finds households that now qualify for support after a job loss, a birth or a bereavement but haven't claimed it, and hands a caseworker a pre-filled application and a draft message to approve. AI reads, rules decide, people approve.</p>
             </div>
             <div class="feature-side">
@@ -196,124 +200,12 @@
                 <li>≈ $132 / month</li>
               </ul>
               <p class="stack">Next.js · Groq gpt-oss-120b · Claude backup · rules engine</p>
-              <p class="project-links"><a href="https://benefitbridge-one.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a><a href="https://github.com/ashokburasiya93/benefitbridge" target="_blank" rel="noopener noreferrer">Repo &amp; deliverables ↗</a><a href="https://miro.com/app/board/uXjVEVr2G-M=/?share_link_id=783156918261" target="_blank" rel="noopener noreferrer">Opportunity map ↗</a></p>
+              <p class="project-links"><a href="https://benefitbridge-one.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
             </div>
           </article>
-
-          <article class="project-card">
-            <p class="project-type">Enterprise Support AI</p>
-            <h3>Enterprise L1 Support AI Agent</h3>
-            <p>Led the build of an LLM-powered support agent that resolves enterprise L1 tickets.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>35% of L1 volume automated</li>
-              <li>Resolution time 4 h → under 15 min</li>
-            </ul>
-            <p class="project-foot">Shipped in production</p>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">Telecom Support AI</p>
-            <h3>Telecom AI Support Assistant</h3>
-            <p>A self-serve chat assistant for a 4M-subscriber mobile operator. It answers Tier-1 questions only from verified sources (FAQ, resolved tickets, technical guide, plan catalogue), shows its sources, and hands off to a live agent when it can't verify an answer.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>Verified self-resolution: 40% pilot target</li>
-              <li>Safety &amp; grounding 100% on every eval set</li>
-              <li>≈ $76 / month at 5,000 contacts a day</li>
-            </ul>
-            <p class="stack">Node.js · Groq gpt-oss-120b · fallback model chain</p>
-            <p class="project-links"><a href="https://novacell-support-assistant.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a><a href="https://github.com/ashokburasiya93/novacell-ai-support-assistant" target="_blank" rel="noopener noreferrer">Repo &amp; deliverables ↗</a><a href="https://miro.com/app/board/uXjVESvQ1ow=/" target="_blank" rel="noopener noreferrer">Opportunity map ↗</a></p>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">Knowledge AI</p>
-            <h3>RAG Knowledge Assistant with LLM Evaluation</h3>
-            <p>Launched a RAG knowledge assistant with an evaluation pipeline that tracks groundedness, answer relevance and hallucination rate.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>Answer accuracy 70% → 88%</li>
-              <li>500+ users</li>
-            </ul>
-            <p class="project-foot">Shipped in production</p>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">HR Policy AI</p>
-            <h3>AskHR: HR Policy Assistant</h3>
-            <p>About 2,500 policy questions a month reach 12 HR partners across India, the UK and the US. AskHR answers routine leave, pay, benefits and travel questions in chat for the employee's own country, grade and contract, links the exact policy section, and routes anything personal or sensitive to a named HR team.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>Self-resolved: 0% → 60% by month 6</li>
-              <li>Held-out evals 20 / 22, guardrails 100%</li>
-              <li>≈ $152 / month all-in</li>
-            </ul>
-            <p class="stack">Node.js · Grok → Groq → Claude fallback chain</p>
-            <p class="project-links"><a href="https://askhr-policy-assistant.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a><a href="https://github.com/ashokburasiya93/askhr-hr-policy-assistant" target="_blank" rel="noopener noreferrer">Repo &amp; deliverables ↗</a><a href="https://miro.com/app/board/uXjVEVax9d0=/?share_link_id=937627272116" target="_blank" rel="noopener noreferrer">Opportunity map ↗</a></p>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">FinOps AI</p>
-            <h3>CloudBill Detective</h3>
-            <p>Cost tools say the cloud bill went up; this says which change caused it. It joins cloud billing with the change log (deploys, infrastructure changes, audit trail), explains every sustained cost change with evidence, routes it to an owner and drafts a read-only fix for approval.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>$58.9k / month avoidable spend traced to 6 causes</li>
-              <li>Explained in 48h: 0% → 80% target</li>
-              <li>12 / 12 launch evals gate every build</li>
-            </ul>
-            <p class="stack">Node.js · cost engine + Claude explanations · fact-checked output</p>
-            <p class="project-links"><a href="https://cloudbill-detective.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a><a href="https://github.com/ashokburasiya93/cloudbill-detective" target="_blank" rel="noopener noreferrer">Repo &amp; deliverables ↗</a><a href="https://miro.com/app/board/uXjVEWxYEbc=/?share_link_id=429785444469" target="_blank" rel="noopener noreferrer">Opportunity map ↗</a></p>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">Sales Enablement AI</p>
-            <h3>AI Sales &amp; CRM Assistant</h3>
-            <p>Built an assistant that summarizes sales calls, drafts follow-ups and updates CRM records.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>10 hours a week saved per rep</li>
-              <li>+8% lead-to-opportunity conversion</li>
-            </ul>
-            <p class="project-foot">Shipped in production</p>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">Sales &amp; CRM AI</p>
-            <h3>Sales Memory &amp; CRM Assistant</h3>
-            <p>A sales team that didn't lack leads, it lacked memory. The assistant reads inboxes and meeting notes, builds a cited ledger of what is owed to whom and by when, gives each seller a ranked daily brief, and proposes CRM updates and reply drafts that a person approves.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>Commitments kept on time: 41% → 80%+</li>
-              <li>Every item quotes its source</li>
-              <li>≈ $47 / month for 4 sellers</li>
-            </ul>
-            <p class="stack">Next.js 15 · Groq gpt-oss-120b · Claude backup</p>
-            <p class="project-links"><a href="https://atliq-sales-and-crm-assistant.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a><a href="https://github.com/ashokburasiya93/atliq-sales-and-crm-assistant" target="_blank" rel="noopener noreferrer">Repo &amp; deliverables ↗</a><a href="https://miro.com/app/board/uXjVEfaAWpg=/" target="_blank" rel="noopener noreferrer">Opportunity map ↗</a><a href="https://www.loom.com/share/cad82b3eae044d318e691b96f9838eaf" target="_blank" rel="noopener noreferrer">Demo video ↗</a></p>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">Manufacturing AI</p>
-            <h3>PDCA Insights Reporter</h3>
-            <p>A plant had 38 open improvement cycles, 11 of them stuck in Check and 27 actions overdue, and managers spent hours a week compiling status by hand. This assistant answers plain-English PDCA questions (what's overdue, did the countermeasure work, have we seen this defect before) and writes the weekly brief. Code computes every number; the model only picks from read-only tools and cites record IDs.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>Review prep: ~3 hours → under 15 min target</li>
-              <li>Held-out evals 20 / 20, safety 100%, p95 4.7 s</li>
-              <li>≈ $6 / month for a 20-user pilot</li>
-            </ul>
-            <p class="stack">Node.js · Groq gpt-oss-120b · OpenRouter fallback · BM25 search · grounding check</p>
-            <p class="project-links"><a href="https://pdca-insights-reporter.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a><a href="https://github.com/ashokburasiya93/pdca-insights-reporter" target="_blank" rel="noopener noreferrer">Repo &amp; deliverables ↗</a><a href="https://miro.com/app/board/uXjVERlQarI=/" target="_blank" rel="noopener noreferrer">Opportunity map ↗</a></p>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">E-commerce AI</p>
-            <h3>BuyRight: "Will this work for me?"</h3>
-            <p>Many returns of appliances, electronics and home goods are products that work but don't suit the buyer's room, phone or space. BuyRight asks 2 to 5 quick questions on the product page, gives a clear verdict from written rules (will a 1-ton AC cool this room, will this charger fast-charge this phone, will this rack fit this wall), explains it with citations to the specs and to reviews from owners in a similar situation, and suggests products that do fit.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>Mismatch returns: −25% target, A/B-test ready</li>
-              <li>Verdicts 18 / 18 held-out, safety gates 100%</li>
-              <li>≈ $0.0003 per AI explanation</li>
-            </ul>
-            <p class="stack">Node.js · rules engine · Groq gpt-oss-120b · OpenRouter fallback · fact-checked output</p>
-            <p class="project-links"><a href="https://buyright-fit-check.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a><a href="https://github.com/ashokburasiya93/buyright-fit-check" target="_blank" rel="noopener noreferrer">Repo &amp; deliverables ↗</a><a href="https://miro.com/app/board/uXjVEQ_4qws=/" target="_blank" rel="noopener noreferrer">Opportunity map ↗</a></p>
-          </article>
-
           <article class="project-card">
             <p class="project-type">Enterprise IT · Agentic AI</p>
-            <h3>AccessPilot: IT access requests that act on approval</h3>
+            <h4>AccessPilot: IT access requests that act on approval</h4>
             <p>Access requests are 30–40% of service desk work: employees wait days, get Editor when Viewer would do, and keep access nobody removes. AccessPilot turns a plain-language request into the right app and least-privileged role, routes it under approval tiers enforced in code, grants on approval with an expiry, revokes in one click with rollback, and logs every step in a hash-chained audit trail. Published as an MCP server: the model only proposes, code decides.</p>
             <ul class="metrics" aria-label="Key numbers">
               <li>Time to access: ~2 days → under 1 hour target</li>
@@ -321,12 +213,143 @@
               <li>Role accuracy 100% on dev + held-out, ≈ $0.21 / month model cost</li>
             </ul>
             <p class="stack">Node.js · MCP server · policy-as-code · Groq gpt-oss-120b · OpenRouter fallback · hash-chained audit log</p>
-            <p class="project-links"><a href="https://accesspilot-it-access-agent.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a><a href="https://github.com/ashokburasiya93/accesspilot-it-access-agent" target="_blank" rel="noopener noreferrer">Repo &amp; deliverables ↗</a><a href="https://miro.com/app/board/uXjVEQ8_0Rg=/" target="_blank" rel="noopener noreferrer">Opportunity map ↗</a></p>
+            <p class="project-links"><a href="https://accesspilot-it-access-agent.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
           </article>
-
+          <article class="project-card">
+            <p class="project-type">FinOps AI</p>
+            <h4>CloudBill Detective</h4>
+            <p>Cost tools say the cloud bill went up; this says which change caused it. It joins cloud billing with the change log (deploys, infrastructure changes, audit trail), explains every sustained cost change with evidence, routes it to an owner and drafts a read-only fix for approval.</p>
+            <ul class="metrics" aria-label="Key numbers">
+              <li>$58.9k / month avoidable spend traced to 6 causes</li>
+              <li>Explained in 48h: 0% → 80% target</li>
+              <li>12 / 12 launch evals gate every build</li>
+            </ul>
+            <p class="stack">Node.js · cost engine + Claude explanations · fact-checked output</p>
+            <p class="project-links"><a href="https://cloudbill-detective.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
+          </article>
+          <article class="project-card">
+            <p class="project-type">Manufacturing AI</p>
+            <h4>PDCA Insights Reporter</h4>
+            <p>A plant had 38 open improvement cycles, 11 of them stuck in Check and 27 actions overdue, and managers spent hours a week compiling status by hand. This assistant answers plain-English PDCA questions (what's overdue, did the countermeasure work, have we seen this defect before) and writes the weekly brief. Code computes every number; the model only picks from read-only tools and cites record IDs.</p>
+            <ul class="metrics" aria-label="Key numbers">
+              <li>Review prep: ~3 hours → under 15 min target</li>
+              <li>Held-out evals 20 / 20, safety 100%, p95 4.7 s</li>
+              <li>≈ $6 / month for a 20-user pilot</li>
+            </ul>
+            <p class="stack">Node.js · Groq gpt-oss-120b · OpenRouter fallback · BM25 search · grounding check</p>
+            <p class="project-links"><a href="https://pdca-insights-reporter.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
+          </article>
+          <article class="project-card">
+            <p class="project-type">Sales &amp; CRM AI</p>
+            <h4>Sales Memory &amp; CRM Assistant</h4>
+            <p>A sales team that didn't lack leads, it lacked memory. The assistant reads inboxes and meeting notes, builds a cited ledger of what is owed to whom and by when, gives each seller a ranked daily brief, and proposes CRM updates and reply drafts that a person approves.</p>
+            <ul class="metrics" aria-label="Key numbers">
+              <li>Commitments kept on time: 41% → 80%+</li>
+              <li>Every item quotes its source</li>
+              <li>≈ $47 / month for 4 sellers</li>
+            </ul>
+            <p class="stack">Next.js 15 · Groq gpt-oss-120b · Claude backup</p>
+            <p class="project-links"><a href="https://atliq-sales-and-crm-assistant.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
+          </article>
+          <article class="project-card">
+            <p class="project-type">Enterprise Support AI</p>
+            <h4>Enterprise L1 Support AI Agent</h4>
+            <p>Led the build of an LLM-powered support agent that resolves enterprise L1 tickets.</p>
+            <ul class="metrics" aria-label="Key numbers">
+              <li>35% of L1 volume automated</li>
+              <li>Resolution time 4 h → under 15 min</li>
+            </ul>
+            <p class="project-foot">Shipped in production</p>
+          </article>
+          <article class="project-card">
+            <p class="project-type">Sales Enablement AI</p>
+            <h4>AI Sales &amp; CRM Assistant</h4>
+            <p>Built an assistant that summarizes sales calls, drafts follow-ups and updates CRM records.</p>
+            <ul class="metrics" aria-label="Key numbers">
+              <li>10 hours a week saved per rep</li>
+              <li>+8% lead-to-opportunity conversion</li>
+            </ul>
+            <p class="project-foot">Shipped in production</p>
+          </article>
+          </div>
+        </div>
+        <div class="case-group" id="rag">
+          <h3 class="group-title">RAG &amp; Grounded Assistants</h3>
+          <p class="group-note">Answers built only from verified sources, with citations, and a handoff when the sources don't cover the question.</p>
+          <div class="project-grid cases">
+          <article class="project-card">
+            <p class="project-type">Telecom Support AI</p>
+            <h4>Telecom AI Support Assistant</h4>
+            <p>A self-serve chat assistant for a 4M-subscriber mobile operator. It answers Tier-1 questions only from verified sources (FAQ, resolved tickets, technical guide, plan catalogue), shows its sources, and hands off to a live agent when it can't verify an answer.</p>
+            <ul class="metrics" aria-label="Key numbers">
+              <li>Verified self-resolution: 40% pilot target</li>
+              <li>Safety &amp; grounding 100% on every eval set</li>
+              <li>≈ $76 / month at 5,000 contacts a day</li>
+            </ul>
+            <p class="stack">Node.js · Groq gpt-oss-120b · fallback model chain</p>
+            <p class="project-links"><a href="https://novacell-support-assistant.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
+          </article>
+          <article class="project-card">
+            <p class="project-type">HR Policy AI</p>
+            <h4>AskHR: HR Policy Assistant</h4>
+            <p>About 2,500 policy questions a month reach 12 HR partners across India, the UK and the US. AskHR answers routine leave, pay, benefits and travel questions in chat for the employee's own country, grade and contract, links the exact policy section, and routes anything personal or sensitive to a named HR team.</p>
+            <ul class="metrics" aria-label="Key numbers">
+              <li>Self-resolved: 0% → 60% by month 6</li>
+              <li>Held-out evals 20 / 22, guardrails 100%</li>
+              <li>≈ $152 / month all-in</li>
+            </ul>
+            <p class="stack">Node.js · Grok → Groq → Claude fallback chain</p>
+            <p class="project-links"><a href="https://askhr-policy-assistant.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
+          </article>
+          <article class="project-card">
+            <p class="project-type">E-commerce AI</p>
+            <h4>BuyRight: "Will this work for me?"</h4>
+            <p>Many returns of appliances, electronics and home goods are products that work but don't suit the buyer's room, phone or space. BuyRight asks 2 to 5 quick questions on the product page, gives a clear verdict from written rules (will a 1-ton AC cool this room, will this charger fast-charge this phone, will this rack fit this wall), explains it with citations to the specs and to reviews from owners in a similar situation, and suggests products that do fit.</p>
+            <ul class="metrics" aria-label="Key numbers">
+              <li>Mismatch returns: −25% target, A/B-test ready</li>
+              <li>Verdicts 18 / 18 held-out, safety gates 100%</li>
+              <li>≈ $0.0003 per AI explanation</li>
+            </ul>
+            <p class="stack">Node.js · rules engine · Groq gpt-oss-120b · OpenRouter fallback · fact-checked output</p>
+            <p class="project-links"><a href="https://buyright-fit-check.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
+          </article>
+          <article class="project-card">
+            <p class="project-type">Knowledge AI</p>
+            <h4>RAG Knowledge Assistant with LLM Evaluation</h4>
+            <p>Launched a RAG knowledge assistant with an evaluation pipeline that tracks groundedness, answer relevance and hallucination rate.</p>
+            <ul class="metrics" aria-label="Key numbers">
+              <li>Answer accuracy 70% → 88%</li>
+              <li>500+ users</li>
+            </ul>
+            <p class="project-foot">Shipped in production</p>
+          </article>
+          </div>
+        </div>
+        <div class="case-group" id="fine-tuning">
+          <h3 class="group-title">Fine-tuning</h3>
+          <p class="group-note">When a small trained model beats a prompt, and when it doesn't, measured on accuracy, safety, latency and cost.</p>
+          <div class="project-grid cases">
+          <article class="project-card">
+            <p class="project-type">Fine-tuning · Model evaluation</p>
+            <h4>NovaCell Intent Router: prompt or fine-tune?</h4>
+            <p>Should a support assistant handling ~150,000 messages a month sort customer messages with a prompted LLM or a small fine-tuned model? I labelled 560 synthetic customer messages across 8 intents, including a must-go-to-an-agent class, fine-tuned a 22M-parameter MiniLM on CPU in 35 seconds, and compared it with a keyword baseline and prompted gpt-oss models on accuracy, safety recall, latency and 12-month cost.</p>
+            <ul class="metrics" aria-label="Key numbers">
+              <li>Fine-tuned: 95.6% test / 88.8% messy-phrasing accuracy (keyword baseline 83.8% / 75.0%)</li>
+              <li>Agent-handoff recall 95% / 90%, ~7 ms per message</li>
+              <li>Fine-tuning pays off only above ~0.7–2.5M messages a month</li>
+            </ul>
+            <p class="stack">PyTorch · MiniLM-L6 · scikit-learn baseline · Groq gpt-oss-120b / 20b · cost model</p>
+            <p class="project-foot">Prompted-LLM comparison in progress</p>
+          </article>
+          </div>
+        </div>
+        <div class="case-group" id="ml">
+          <h3 class="group-title">ML &amp; Analytics</h3>
+          <p class="group-note">Predictive models and dashboards that drive planning decisions.</p>
+          <div class="project-grid cases">
           <article class="project-card">
             <p class="project-type">Business Analytics</p>
-            <h3>Sales Forecasting &amp; Dashboards</h3>
+            <h4>Sales Forecasting &amp; Dashboards</h4>
             <p>Built sales dashboards and forecasting models that gave product and sales leaders cross-channel revenue visibility.</p>
             <ul class="metrics" aria-label="Key numbers">
               <li>Forecast accuracy 85% → 91%</li>
@@ -334,10 +357,15 @@
             </ul>
             <p class="project-foot">Shipped in production</p>
           </article>
-
+          </div>
+        </div>
+        <div class="case-group" id="strategy">
+          <h3 class="group-title">AI Product Strategy</h3>
+          <p class="group-note">Finding where AI creates value and deciding what to build first.</p>
+          <div class="project-grid cases">
           <article class="project-card">
             <p class="project-type">AI Product Strategy</p>
-            <h3>AI Opportunity Decks</h3>
+            <h4>AI Opportunity Decks</h4>
             <p>Five AI opportunity analyses of global tech platforms, written as a product owner: each company's business from its latest results, three AI features with the data and metrics they need, Reach × Impact × Confidence ÷ Effort scoring, and an MVP blueprint for the feature to build first.</p>
             <ul class="metrics" aria-label="Build-first feature per company">
               <li>LiftLens · ad lift proof</li>
@@ -347,8 +375,8 @@
               <li>Pay-per-Task Ads · pay on completed bookings</li>
             </ul>
             <p class="stack">Q3 2026 results · sources in speaker notes</p>
-            <p class="project-links"><a href="https://github.com/ashokburasiya93/AI-Opportunity" target="_blank" rel="noopener noreferrer">Repo &amp; decks ↗</a></p>
           </article>
+          </div>
         </div>
       </div>
     </section>
@@ -358,7 +386,6 @@
         <p class="eyebrow">06 · Connect</p>
         <h2>Let's build better AI products together.</h2>
         <p>I'm an AI Product Manager exploring opportunities to create trustworthy, measurable, and customer-centered AI products. I enjoy discussing AI strategy, LLM product design, evaluation frameworks, and business impact across enterprise workflows.</p>
-        <a class="button primary" href="https://github.com/ashokburasiya93" target="_blank" rel="noopener noreferrer">GitHub profile ↗</a>
       </div>
     </section>
   </main>
