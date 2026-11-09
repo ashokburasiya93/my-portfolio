@@ -334,12 +334,12 @@
             <h4>NovaCell Intent Router: prompt or fine-tune?</h4>
             <p>Should a support assistant handling ~150,000 messages a month sort customer messages with a prompted LLM or a small fine-tuned model? I labelled 560 synthetic customer messages across 8 intents, including a must-go-to-an-agent class, fine-tuned a 22M-parameter MiniLM on CPU in 35 seconds, and compared it with a keyword baseline and prompted gpt-oss models on accuracy, safety recall, latency and 12-month cost.</p>
             <ul class="metrics" aria-label="Key numbers">
-              <li>Fine-tuned: 95.6% test / 88.8% messy-phrasing accuracy (keyword baseline 83.8% / 75.0%)</li>
-              <li>Agent-handoff recall 95% / 90%, ~7 ms per message</li>
-              <li>Fine-tuning pays off only above ~0.7–2.5M messages a month</li>
+              <li>Fine-tuned: 95.6% clean / 88.8% messy accuracy, ~7 ms</li>
+              <li>Prompted gpt-oss-120b: 93.8% clean / 98.8% messy, 100% agent handoffs caught on messy messages</li>
+              <li>Decision: keep the prompt ($289 vs $954 a year); fine-tuning pays off only above ~0.7M messages a month</li>
             </ul>
             <p class="stack">PyTorch · MiniLM-L6 · scikit-learn baseline · Groq gpt-oss-120b / 20b · cost model</p>
-            <p class="project-foot">Prompted-LLM comparison in progress</p>
+            <p class="project-foot">Study complete · decision written up</p>
           </article>
           </div>
         </div>
