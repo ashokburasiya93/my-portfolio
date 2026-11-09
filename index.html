@@ -181,7 +181,7 @@
           <h2>AI products shipped at work and built end to end, each tied to a measurable result.</h2>
           <p class="section-note">Grouped by type of AI product. Projects with a live demo run on synthetic data, and each one was built end to end: user research, AI opportunity map, PRD with a North Star metric, cost model, evaluated prototype and deck.</p>
         </div>
-        <nav class="case-nav" aria-label="Case study categories"><a href="#agents">AI Agents</a><a href="#rag">RAG &amp; Grounded Assistants</a><a href="#fine-tuning">Fine-tuning</a><a href="#deep-learning">Deep Learning &amp; Speech</a><a href="#ml">ML &amp; Analytics</a><a href="#strategy">AI Product Strategy</a></nav>
+        <nav class="case-nav" aria-label="Case study categories"><a href="#agents">AI Agents</a><a href="#rag">RAG &amp; Grounded Assistants</a><a href="#fine-tuning">Fine-tuning</a><a href="#deep-learning">Deep Learning &amp; Speech</a><a href="#ml">ML, Recommenders &amp; Analytics</a><a href="#strategy">AI Product Strategy</a></nav>
         <div class="case-group" id="agents">
           <h3 class="group-title">AI Agents</h3>
           <p class="group-note">Agents that read data, call tools and act, with people approving anything that changes a record.</p>
@@ -362,8 +362,8 @@
           </div>
         </div>
         <div class="case-group" id="ml">
-          <h3 class="group-title">ML &amp; Analytics</h3>
-          <p class="group-note">Predictive models and dashboards that drive planning decisions.</p>
+          <h3 class="group-title">ML, Recommenders &amp; Analytics</h3>
+          <p class="group-note">Predictive models, recommenders and dashboards that drive decisions.</p>
           <div class="project-grid cases">
           <article class="project-card">
             <p class="project-type">Traditional ML + GenAI</p>
@@ -376,6 +376,18 @@
             </ul>
             <p class="stack">scikit-learn · SHAP · Node.js · Groq gpt-oss-120b</p>
             <p class="project-links"><a href="https://novacell-churn-radar.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
+          </article>
+          <article class="project-card">
+            <p class="project-type">Recommender System</p>
+            <h4>NovaCell Plan Recommender</h4>
+            <p>Fit-first plan and add-on recommendations for a mobile operator's app. A hybrid gradient-boosted ranker, trained on real plan changes, suggests up to three options with the reason from each customer's usage and the exact bill change; a guardrail blocks bill shock, a gate stays silent when the plan already fits, and an AI-written message is checked by code.</p>
+            <ul class="metrics" aria-label="Key numbers">
+              <li>89% of real plan changes in the top 3, vs 67% for the agent playbook</li>
+              <li>Bill shock 0.1% vs 62% for the playbook</li>
+              <li>Revenue trade-off quantified: break-even churn cut for each policy, decided by A/B test</li>
+            </ul>
+            <p class="stack">scikit-learn ranker · collaborative filtering · Node.js · Groq gpt-oss-120b</p>
+            <p class="project-links"><a href="https://novacell-plan-recommender.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
           </article>
           <article class="project-card">
             <p class="project-type">Business Analytics</p>
