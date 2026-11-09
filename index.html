@@ -181,7 +181,7 @@
           <h2>AI products shipped at work and built end to end, each tied to a measurable result.</h2>
           <p class="section-note">Grouped by type of AI product. Projects with a live demo run on synthetic data, and each one was built end to end: user research, AI opportunity map, PRD with a North Star metric, cost model, evaluated prototype and deck.</p>
         </div>
-        <nav class="case-nav" aria-label="Case study categories"><a href="#agents">AI Agents</a><a href="#rag">RAG &amp; Grounded Assistants</a><a href="#fine-tuning">Fine-tuning</a><a href="#ml">ML &amp; Analytics</a><a href="#strategy">AI Product Strategy</a></nav>
+        <nav class="case-nav" aria-label="Case study categories"><a href="#agents">AI Agents</a><a href="#rag">RAG &amp; Grounded Assistants</a><a href="#fine-tuning">Fine-tuning</a><a href="#deep-learning">Deep Learning &amp; Speech</a><a href="#ml">ML &amp; Analytics</a><a href="#strategy">AI Product Strategy</a></nav>
         <div class="case-group" id="agents">
           <h3 class="group-title">AI Agents</h3>
           <p class="group-note">Agents that read data, call tools and act, with people approving anything that changes a record.</p>
@@ -340,6 +340,24 @@
             </ul>
             <p class="stack">PyTorch · MiniLM-L6 · scikit-learn baseline · Groq gpt-oss-120b / 20b · cost model</p>
             <p class="project-foot">Study complete · decision written up</p>
+          </article>
+          </div>
+        </div>
+        <div class="case-group" id="deep-learning">
+          <h3 class="group-title">Deep Learning &amp; Speech</h3>
+          <p class="group-note">Neural models for perception, chosen by measuring them on the product's own data.</p>
+          <div class="project-grid cases">
+          <article class="project-card">
+            <p class="project-type">Speech AI · Multilingual</p>
+            <h4>NovaCell Voice Assist</h4>
+            <p>Voice self-service for a mobile operator's Hindi and Gujarati speakers. A deep-learning speech model (Whisper) transcribes Hindi, Gujarati, Hinglish or English with product words as a hint; the existing grounded assistant answers only from verified content; the reply is translated back with every number checked and read aloud.</p>
+            <ul class="metrics" aria-label="Key numbers">
+              <li>Character error rate: Hindi 11%, Gujarati 18% (from 53% / 61% without a language hint)</li>
+              <li>Wrong-alphabet transcripts: 9 of 20 → 0 with the hint; cheaper turbo model rejected</li>
+              <li>≈ $0.0014 per voice question</li>
+            </ul>
+            <p class="stack">Whisper large-v3 (Groq) · gpt-oss-120b / 20b · Node.js · browser speech</p>
+            <p class="project-links"><a href="https://novacell-voice-assist.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
           </article>
           </div>
         </div>
