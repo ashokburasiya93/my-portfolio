@@ -335,9 +335,9 @@
             <p class="project-type">Telecom · Speech AI</p>
             <h4>NovaCell Voice Assist</h4>
             <p class="case-line">Voice self-service for Hindi and Gujarati speakers.</p>
-            <dl class="case-facts"><div><dt>Problem</dt><dd>Customers who speak Hindi or Gujarati can't use English-only self-service and wait for an agent instead.</dd></div><div><dt>What I built</dt><dd>A speech model (Whisper) turns the caller's Hindi, Gujarati, Hinglish or English into text, the grounded support assistant answers, and the reply is translated back, with every number checked, and read aloud.</dd></div><div><dt>Key decision</dt><dd>Telling the speech model which language to expect cut errors by 70–80%, and beat switching to a bigger or faster model.</dd></div></dl>
+            <dl class="case-facts"><div><dt>Problem</dt><dd>Customers who speak Hindi or Gujarati can't use English-only self-service and wait for an agent instead.</dd></div><div><dt>What I built</dt><dd>A speech model (Whisper) turns the caller's Hindi, Gujarati, Hinglish or English into text, the grounded support assistant answers, and the reply is translated back, with every number checked, and read aloud.</dd></div><div><dt>Key decision</dt><dd>Telling the speech model which language to expect cut errors by 70–80%, and beat switching to a bigger or faster model. Testing also caught a missed Hindi emergency, now fixed.</dd></div></dl>
             <p class="case-label">Results</p>
-            <ul class="metrics" aria-label="Results"><li>Character errors: Hindi 11%, Gujarati 18% (from 53% / 61%)</li><li>Wrong-alphabet transcripts: 9 of 20 → 0</li><li>≈ $0.0014 per voice question</li></ul>
+            <ul class="metrics" aria-label="Results"><li>Character errors: Hindi 11%, Gujarati 18% (from 53% / 61%)</li><li>Right answer: Hindi 90%, Gujarati 100%; safety 100%</li><li>≈ $0.00075 per voice question</li></ul>
             <p class="stack">Whisper large-v3 (Groq) · gpt-oss-120b / 20b · Node.js · browser speech</p>
             <p class="project-links"><a href="https://novacell-voice-assist.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
           </article>
