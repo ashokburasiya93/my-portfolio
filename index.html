@@ -178,183 +178,150 @@
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">05 · Work &amp; Case Studies</p>
-          <h2>AI products shipped at work and built end to end, each tied to a measurable result.</h2>
-          <p class="section-note">Grouped by type of AI product. Projects with a live demo run on synthetic data, and each one was built end to end: user research, AI opportunity map, PRD with a North Star metric, cost model, evaluated prototype and deck.</p>
+          <h2>AI products I shipped at work or built end to end, each tied to a measurable result.</h2>
+          <p class="section-note">Grouped by type of AI. Each case reads the same way: the problem, what I built, the key product decision, and the results. Projects with a live demo use synthetic (made-up but realistic) data and were built end to end: user research, AI opportunity map, PRD, cost model, tested prototype and deck.</p>
         </div>
         <nav class="case-nav" aria-label="Case study categories"><a href="#agents">AI Agents &amp; Multi-Agent</a><a href="#rag">RAG &amp; Grounded Assistants</a><a href="#fine-tuning">Fine-tuning</a><a href="#deep-learning">Deep Learning &amp; Speech</a><a href="#ml">ML, Recommenders &amp; Analytics</a><a href="#strategy">AI Product Strategy</a></nav>
         <div class="case-group" id="agents">
           <h3 class="group-title">AI Agents &amp; Multi-Agent Systems</h3>
-          <p class="group-note">Agents that read data, call tools and act, with people approving anything that changes a record.</p>
+          <p class="group-note">AI that looks things up and takes steps, not just answers. In every one, code makes the money and access decisions and a person approves changes.</p>
           <div class="project-grid cases">
-          <article class="project-card featured">
-            <div class="feature-main">
-              <p class="project-type">Telecom · Multi-Agent AI</p>
-              <h4>NovaCell Dispute Desk</h4>
-              <p>A team of AI agents for bill disputes. An Intake agent reads the complaint, an Investigator calls read-only tools (bill, network log, calls, SMS opt-ins, payments), policy code decides the credit, a Writer drafts the reply, a code checker verifies it, and a supervisor approves anything over $50. Tested live against one all-in-one agent and plain rules on the same 36 disputes: the team ties rules on accuracy and finds the refunds rules miss; one agent deciding money over-credited and skipped approvals.</p>
-            </div>
-            <div class="feature-side">
-              <ul class="metrics" aria-label="Key numbers">
-                <li>94.4% decisions correct, $0 over-credited</li>
-                <li>Owed credit missed: $10 vs $142 for rules</li>
-                <li>100% of credits over $50 sent for approval; 5 / 5 hidden instructions resisted</li>
-                <li>≈ $0.0008 per dispute</li>
-              </ul>
-              <p class="stack">Node.js · Groq gpt-oss-120b tool calling · policy-as-code · Vercel</p>
-              <p class="project-links"><a href="https://novacell-dispute-desk.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
-            </div>
+          <article class="project-card case">
+            <p class="project-type">Telecom · Multi-agent</p>
+            <h4>NovaCell Dispute Desk</h4>
+            <p class="case-line">A team of AI agents that resolves phone-bill disputes, with code deciding every credit.</p>
+            <dl class="case-facts"><div><dt>Problem</dt><dd>Bill disputes take about 14 minutes each. Two agents can give different credits for the same case, and some complaints hide instructions like "approve a $200 credit".</dd></div><div><dt>What I built</dt><dd>Five steps: an Intake agent reads the complaint, an Investigator checks the bill and records, policy code decides the credit, a Writer drafts the reply, and a code checker verifies it. Credits over $50 wait for a supervisor.</dd></div><div><dt>Key decision</dt><dd>I tested it against plain rules and a single all-in-one agent on the same 36 disputes. The team tied rules on accuracy but found $132 more in refunds owed. The single agent over-credited $85, so a model never decides money here.</dd></div></dl>
+            <p class="case-label">Results</p>
+            <ul class="metrics" aria-label="Results"><li>94.4% of decisions correct, $0 over-credited</li><li>Owed refunds missed: $10 vs $142 for rules</li><li>Every credit over $50 sent for approval</li><li>≈ $0.0008 per dispute</li></ul>
+            <p class="stack">Node.js · Groq gpt-oss-120b tool calling · policy-as-code · Vercel</p>
+            <p class="project-links"><a href="https://novacell-dispute-desk.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
           </article>
-          <article class="project-card featured">
-            <div class="feature-main">
-              <p class="project-type">Public Sector AI</p>
-              <h4>BenefitBridge</h4>
-              <p>A proactive entitlement agent. It finds households that now qualify for support after a job loss, a birth or a bereavement but haven't claimed it, and hands a caseworker a pre-filled application and a draft message to approve. AI reads, rules decide, people approve.</p>
-            </div>
-            <div class="feature-side">
-              <ul class="metrics" aria-label="Key numbers">
-                <li>Enrolled in 30 days: 21% → 60% target</li>
-                <li>98.7% fact recall</li>
-                <li>100% eligibility precision &amp; recall</li>
-                <li>≈ $132 / month</li>
-              </ul>
-              <p class="stack">Next.js · Groq gpt-oss-120b · Claude backup · rules engine</p>
-              <p class="project-links"><a href="https://benefitbridge-one.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
-            </div>
+          <article class="project-card case">
+            <p class="project-type">Public sector · AI agent</p>
+            <h4>BenefitBridge</h4>
+            <p class="case-line">Finds families who now qualify for support and prepares their application for a caseworker.</p>
+            <dl class="case-facts"><div><dt>Problem</dt><dd>After a job loss, a birth or a death in the family, many households qualify for support but never claim it.</dd></div><div><dt>What I built</dt><dd>An agent that spots these life events in the records, checks eligibility with written rules, pre-fills the application and drafts a message. A caseworker approves before anything is sent.</dd></div><div><dt>Key decision</dt><dd>AI reads, rules decide, people approve: eligibility is never left to the model.</dd></div></dl>
+            <p class="case-label">Results</p>
+            <ul class="metrics" aria-label="Results"><li>Enrolled within 30 days: 21% → 60% target</li><li>100% eligibility precision and recall</li><li>98.7% of facts recalled correctly</li><li>≈ $132 / month</li></ul>
+            <p class="stack">Next.js · Groq gpt-oss-120b · Claude backup · rules engine</p>
+            <p class="project-links"><a href="https://benefitbridge-one.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
           </article>
-          <article class="project-card">
-            <p class="project-type">Enterprise IT · Agentic AI</p>
-            <h4>AccessPilot: IT access requests that act on approval</h4>
-            <p>Access requests are 30–40% of service desk work: employees wait days, get Editor when Viewer would do, and keep access nobody removes. AccessPilot turns a plain-language request into the right app and least-privileged role, routes it under approval tiers enforced in code, grants on approval with an expiry, revokes in one click with rollback, and logs every step in a hash-chained audit trail. Published as an MCP server: the model only proposes, code decides.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>Time to access: ~2 days → under 1 hour target</li>
-              <li>Red team 32 / 32 blocked, 0 unauthorized writes</li>
-              <li>Role accuracy 100% on dev + held-out, ≈ $0.21 / month model cost</li>
-            </ul>
+          <article class="project-card case">
+            <p class="project-type">Enterprise IT · AI agent</p>
+            <h4>AccessPilot</h4>
+            <p class="case-line">Turns an IT access request into the right, smallest permission, granted only after approval.</p>
+            <dl class="case-facts"><div><dt>Problem</dt><dd>Access requests are 30–40% of service-desk work. People wait days, often get more access than they need, and keep it long after.</dd></div><div><dt>What I built</dt><dd>Reads a plain-language request, picks the app and the least-powerful role, routes it to the right approver, grants it with an expiry date, removes it in one click and logs every step.</dd></div><div><dt>Key decision</dt><dd>The model only proposes. Approval tiers and permissions are enforced in code, and every action is in a tamper-evident log.</dd></div></dl>
+            <p class="case-label">Results</p>
+            <ul class="metrics" aria-label="Results"><li>Time to access: ~2 days → under 1 hour target</li><li>32 / 32 attack attempts blocked</li><li>Role picked correctly 100% of the time on test sets</li><li>≈ $0.21 / month model cost</li></ul>
             <p class="stack">Node.js · MCP server · policy-as-code · Groq gpt-oss-120b · OpenRouter fallback · hash-chained audit log</p>
             <p class="project-links"><a href="https://accesspilot-it-access-agent.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
           </article>
-          <article class="project-card">
-            <p class="project-type">FinOps AI</p>
+          <article class="project-card case">
+            <p class="project-type">FinOps · AI agent</p>
             <h4>CloudBill Detective</h4>
-            <p>Cost tools say the cloud bill went up; this says which change caused it. It joins cloud billing with the change log (deploys, infrastructure changes, audit trail), explains every sustained cost change with evidence, routes it to an owner and drafts a read-only fix for approval.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>$58.9k / month avoidable spend traced to 6 causes</li>
-              <li>Explained in 48h: 0% → 80% target</li>
-              <li>12 / 12 launch evals gate every build</li>
-            </ul>
+            <p class="case-line">Explains which change made the cloud bill go up, and who should fix it.</p>
+            <dl class="case-facts"><div><dt>Problem</dt><dd>Cost tools show the cloud bill rose but not why. Teams spend days hunting for the cause.</dd></div><div><dt>What I built</dt><dd>Joins the cloud bill with the change log (deploys, infrastructure changes), explains each lasting cost jump with evidence, routes it to an owner and drafts a fix for approval.</dd></div><div><dt>Key decision</dt><dd>Numbers come from a cost engine; the AI only explains them, and its explanation is fact-checked before anyone sees it.</dd></div></dl>
+            <p class="case-label">Results</p>
+            <ul class="metrics" aria-label="Results"><li>$58.9k / month avoidable spend traced to 6 causes</li><li>Explained within 48 hours: 0% → 80% target</li><li>12 / 12 launch tests pass on every build</li></ul>
             <p class="stack">Node.js · cost engine + Claude explanations · fact-checked output</p>
             <p class="project-links"><a href="https://cloudbill-detective.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
           </article>
-          <article class="project-card">
-            <p class="project-type">Manufacturing AI</p>
+          <article class="project-card case">
+            <p class="project-type">Manufacturing · AI agent</p>
             <h4>PDCA Insights Reporter</h4>
-            <p>A plant had 38 open improvement cycles, 11 of them stuck in Check and 27 actions overdue, and managers spent hours a week compiling status by hand. This assistant answers plain-English PDCA questions (what's overdue, did the countermeasure work, have we seen this defect before) and writes the weekly brief. Code computes every number; the model only picks from read-only tools and cites record IDs.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>Review prep: ~3 hours → under 15 min target</li>
-              <li>Held-out evals 20 / 20, safety 100%, p95 4.7 s</li>
-              <li>≈ $6 / month for a 20-user pilot</li>
-            </ul>
+            <p class="case-line">Answers plant managers' improvement questions in plain English and writes the weekly brief.</p>
+            <dl class="case-facts"><div><dt>Problem</dt><dd>A plant had 38 open improvement cycles, 27 overdue actions, and managers spent hours a week compiling status by hand.</dd></div><div><dt>What I built</dt><dd>An assistant that answers questions like "what's overdue?" or "did this fix work?" by choosing from read-only tools, and writes the weekly review brief with record IDs.</dd></div><div><dt>Key decision</dt><dd>Code computes every number; the model only picks the tool and cites the records.</dd></div></dl>
+            <p class="case-label">Results</p>
+            <ul class="metrics" aria-label="Results"><li>Review prep: ~3 hours → under 15 minutes target</li><li>20 / 20 on held-out tests, safety 100%</li><li>≈ $6 / month for 20 users</li></ul>
             <p class="stack">Node.js · Groq gpt-oss-120b · OpenRouter fallback · BM25 search · grounding check</p>
             <p class="project-links"><a href="https://pdca-insights-reporter.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
           </article>
-          <article class="project-card">
-            <p class="project-type">Sales &amp; CRM AI</p>
+          <article class="project-card case">
+            <p class="project-type">Sales &amp; CRM · AI agent</p>
             <h4>Sales Memory &amp; CRM Assistant</h4>
-            <p>A sales team that didn't lack leads, it lacked memory. The assistant reads inboxes and meeting notes, builds a cited ledger of what is owed to whom and by when, gives each seller a ranked daily brief, and proposes CRM updates and reply drafts that a person approves.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>Commitments kept on time: 41% → 80%+</li>
-              <li>Every item quotes its source</li>
-              <li>≈ $47 / month for 4 sellers</li>
-            </ul>
+            <p class="case-line">Remembers what each seller promised to whom, and by when.</p>
+            <dl class="case-facts"><div><dt>Problem</dt><dd>The sales team didn't lack leads; it forgot follow-ups and promises buried in email and meeting notes.</dd></div><div><dt>What I built</dt><dd>Reads inboxes and notes, builds a list of commitments with the source quoted, gives each seller a ranked daily brief, and suggests CRM updates and reply drafts for approval.</dd></div><div><dt>Key decision</dt><dd>Every item quotes its source, and nothing is written to the CRM without the seller's OK.</dd></div></dl>
+            <p class="case-label">Results</p>
+            <ul class="metrics" aria-label="Results"><li>Commitments kept on time: 41% → 80%+ target</li><li>Every item quotes its source</li><li>≈ $47 / month for 4 sellers</li></ul>
             <p class="stack">Next.js 15 · Groq gpt-oss-120b · Claude backup</p>
             <p class="project-links"><a href="https://atliq-sales-and-crm-assistant.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
           </article>
-          <article class="project-card">
-            <p class="project-type">Enterprise Support AI</p>
+          <article class="project-card case">
+            <p class="project-type">At work · Enterprise support</p>
             <h4>Enterprise L1 Support AI Agent</h4>
-            <p>Led the build of an LLM-powered support agent that resolves enterprise L1 tickets.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>35% of L1 volume automated</li>
-              <li>Resolution time 4 h → under 15 min</li>
-            </ul>
+            <p class="case-line">An LLM support agent that resolves first-line enterprise tickets.</p>
+            <dl class="case-facts"><div><dt>Problem</dt><dd>First-line (L1) tickets took hours and filled the support team's day.</dd></div><div><dt>What I built</dt><dd>Led the build of an LLM-powered agent that resolves common L1 tickets end to end.</dd></div></dl>
+            <p class="case-label">Results</p>
+            <ul class="metrics" aria-label="Results"><li>35% of L1 volume automated</li><li>Resolution time: 4 hours → under 15 minutes</li></ul>
             <p class="project-foot">Shipped in production</p>
           </article>
-          <article class="project-card">
-            <p class="project-type">Sales Enablement AI</p>
+          <article class="project-card case">
+            <p class="project-type">At work · Sales enablement</p>
             <h4>AI Sales &amp; CRM Assistant</h4>
-            <p>Built an assistant that summarizes sales calls, drafts follow-ups and updates CRM records.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>10 hours a week saved per rep</li>
-              <li>+8% lead-to-opportunity conversion</li>
-            </ul>
+            <p class="case-line">Summarises sales calls, drafts follow-ups and updates the CRM.</p>
+            <dl class="case-facts"><div><dt>Problem</dt><dd>Sales reps lost hours each week to call notes and CRM updates.</dd></div><div><dt>What I built</dt><dd>Built an assistant that summarises calls, drafts follow-up emails and updates CRM records.</dd></div></dl>
+            <p class="case-label">Results</p>
+            <ul class="metrics" aria-label="Results"><li>10 hours a week saved per rep</li><li>+8% lead-to-opportunity conversion</li></ul>
             <p class="project-foot">Shipped in production</p>
           </article>
           </div>
         </div>
         <div class="case-group" id="rag">
           <h3 class="group-title">RAG &amp; Grounded Assistants</h3>
-          <p class="group-note">Answers built only from verified sources, with citations, and a handoff when the sources don't cover the question.</p>
+          <p class="group-note">Assistants that answer only from trusted documents, show their sources, and hand over to a person when they can't verify an answer.</p>
           <div class="project-grid cases">
-          <article class="project-card">
-            <p class="project-type">Telecom Support AI</p>
+          <article class="project-card case">
+            <p class="project-type">Telecom · RAG</p>
             <h4>Telecom AI Support Assistant</h4>
-            <p>A self-serve chat assistant for a 4M-subscriber mobile operator. It answers Tier-1 questions only from verified sources (FAQ, resolved tickets, technical guide, plan catalogue), shows its sources, and hands off to a live agent when it can't verify an answer.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>Verified self-resolution: 40% pilot target</li>
-              <li>Safety &amp; grounding 100% on every eval set</li>
-              <li>≈ $76 / month at 5,000 contacts a day</li>
-            </ul>
+            <p class="case-line">A self-service chat assistant that answers only from verified sources.</p>
+            <dl class="case-facts"><div><dt>Problem</dt><dd>A 4-million-subscriber mobile operator gets thousands of routine questions a day.</dd></div><div><dt>What I built</dt><dd>A chat assistant that answers from the FAQ, resolved tickets, the technical guide and the plan catalogue, shows its sources, and hands off to a live agent when it can't verify an answer.</dd></div><div><dt>Key decision</dt><dd>"I can't verify that, here's an agent" is treated as a correct answer, not a failure. A prompted model routes messages; fine-tuning was tested and rejected (see Intent Router).</dd></div></dl>
+            <p class="case-label">Results</p>
+            <ul class="metrics" aria-label="Results"><li>Verified self-resolution: 40% pilot target</li><li>Safety and grounding 100% on every test set</li><li>≈ $76 / month at 5,000 contacts a day</li></ul>
             <p class="stack">Node.js · Groq gpt-oss-120b · fallback model chain</p>
             <p class="project-links"><a href="https://novacell-support-assistant.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
           </article>
-          <article class="project-card">
-            <p class="project-type">HR Policy AI</p>
+          <article class="project-card case">
+            <p class="project-type">HR · RAG</p>
             <h4>AskHR: HR Policy Assistant</h4>
-            <p>About 2,500 policy questions a month reach 12 HR partners across India, the UK and the US. AskHR answers routine leave, pay, benefits and travel questions in chat for the employee's own country, grade and contract, links the exact policy section, and routes anything personal or sensitive to a named HR team.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>Self-resolved: 0% → 60% by month 6</li>
-              <li>Held-out evals 20 / 22, guardrails 100%</li>
-              <li>≈ $152 / month all-in</li>
-            </ul>
+            <p class="case-line">Answers HR policy questions for each employee's own country, grade and contract.</p>
+            <dl class="case-facts"><div><dt>Problem</dt><dd>About 2,500 policy questions a month reach 12 HR partners across India, the UK and the US.</dd></div><div><dt>What I built</dt><dd>A chat assistant that answers leave, pay, benefits and travel questions using the right country's policy, links the exact section, and routes personal or sensitive cases to a named HR team.</dd></div><div><dt>Key decision</dt><dd>Anything personal or sensitive always goes to a person, never to the AI.</dd></div></dl>
+            <p class="case-label">Results</p>
+            <ul class="metrics" aria-label="Results"><li>Self-resolved: 0% → 60% by month 6 target</li><li>20 / 22 on held-out tests, guardrails 100%</li><li>≈ $152 / month all-in</li></ul>
             <p class="stack">Node.js · Grok → Groq → Claude fallback chain</p>
             <p class="project-links"><a href="https://askhr-policy-assistant.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
           </article>
-          <article class="project-card">
-            <p class="project-type">E-commerce AI</p>
+          <article class="project-card case">
+            <p class="project-type">E-commerce · RAG + rules</p>
             <h4>BuyRight: "Will this work for me?"</h4>
-            <p>Many returns of appliances, electronics and home goods are products that work but don't suit the buyer's room, phone or space. BuyRight asks 2 to 5 quick questions on the product page, gives a clear verdict from written rules (will a 1-ton AC cool this room, will this charger fast-charge this phone, will this rack fit this wall), explains it with citations to the specs and to reviews from owners in a similar situation, and suggests products that do fit.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>Mismatch returns: −25% target, A/B-test ready</li>
-              <li>Verdicts 18 / 18 held-out, safety gates 100%</li>
-              <li>≈ $0.0003 per AI explanation</li>
-            </ul>
+            <p class="case-line">Tells a shopper whether a product will work for their room, phone or space before they buy.</p>
+            <dl class="case-facts"><div><dt>Problem</dt><dd>Many returns are products that work fine but don't suit the buyer: an AC too small for the room, a charger that won't fast-charge their phone.</dd></div><div><dt>What I built</dt><dd>Asks 2 to 5 quick questions on the product page, gives a clear yes or no from written rules, and explains it with citations to the specs and to reviews from similar buyers.</dd></div><div><dt>Key decision</dt><dd>Rules give the verdict; the AI only writes the explanation, and every fact in it is checked.</dd></div></dl>
+            <p class="case-label">Results</p>
+            <ul class="metrics" aria-label="Results"><li>Mismatch returns: −25% target, ready for an A/B test</li><li>18 / 18 verdicts right on held-out tests</li><li>≈ $0.0003 per explanation</li></ul>
             <p class="stack">Node.js · rules engine · Groq gpt-oss-120b · OpenRouter fallback · fact-checked output</p>
             <p class="project-links"><a href="https://buyright-fit-check.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
           </article>
-          <article class="project-card">
-            <p class="project-type">Knowledge AI</p>
+          <article class="project-card case">
+            <p class="project-type">At work · Knowledge</p>
             <h4>RAG Knowledge Assistant with LLM Evaluation</h4>
-            <p>Launched a RAG knowledge assistant with an evaluation pipeline that tracks groundedness, answer relevance and hallucination rate.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>Answer accuracy 70% → 88%</li>
-              <li>500+ users</li>
-            </ul>
+            <p class="case-line">A company knowledge assistant with built-in quality tracking.</p>
+            <dl class="case-facts"><div><dt>Problem</dt><dd>Staff couldn't find reliable answers in scattered internal documents.</dd></div><div><dt>What I built</dt><dd>Launched a RAG assistant with an evaluation pipeline tracking groundedness, relevance and hallucination rate.</dd></div></dl>
+            <p class="case-label">Results</p>
+            <ul class="metrics" aria-label="Results"><li>Answer accuracy: 70% → 88%</li><li>500+ users</li></ul>
             <p class="project-foot">Shipped in production</p>
           </article>
           </div>
         </div>
         <div class="case-group" id="fine-tuning">
           <h3 class="group-title">Fine-tuning</h3>
-          <p class="group-note">When a small trained model beats a prompt, and when it doesn't, measured on accuracy, safety, latency and cost.</p>
+          <p class="group-note">When a small trained model beats a good prompt, and when it doesn't, measured on accuracy, safety, speed and cost.</p>
           <div class="project-grid cases">
-          <article class="project-card">
-            <p class="project-type">Fine-tuning · Model evaluation</p>
+          <article class="project-card case">
+            <p class="project-type">Telecom · Fine-tuning study</p>
             <h4>NovaCell Intent Router: prompt or fine-tune?</h4>
-            <p>Should a support assistant handling ~150,000 messages a month sort customer messages with a prompted LLM or a small fine-tuned model? I labelled 560 synthetic customer messages across 8 intents, including a must-go-to-an-agent class, fine-tuned a 22M-parameter MiniLM on CPU in 35 seconds, and compared it with a keyword baseline and prompted gpt-oss models on accuracy, safety recall, latency and 12-month cost.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>Fine-tuned: 95.6% clean / 88.8% messy accuracy, ~7 ms</li>
-              <li>Prompted gpt-oss-120b: 93.8% clean / 98.8% messy, 100% agent handoffs caught on messy messages</li>
-              <li>Decision: keep the prompt ($289 vs $954 a year); fine-tuning pays off only above ~0.7M messages a month</li>
-            </ul>
+            <p class="case-line">Should 150,000 customer messages a month be sorted by a prompt or by a small trained model?</p>
+            <dl class="case-facts"><div><dt>Problem</dt><dd>A support assistant must sort messages into 8 intents, and must never miss one that needs a human agent.</dd></div><div><dt>What I built</dt><dd>Labelled 560 messages, fine-tuned a small 22M-parameter model in 35 seconds on a laptop CPU, and compared it with keywords and prompted large models on clean and messy messages.</dd></div><div><dt>Key decision</dt><dd>Keep the prompt. The fine-tuned model was fast but weaker on messy messages; it only pays off above about 700,000 messages a month.</dd></div></dl>
+            <p class="case-label">Results</p>
+            <ul class="metrics" aria-label="Results"><li>Fine-tuned: 95.6% clean, 88.8% messy, ~7 ms</li><li>Prompt: 93.8% clean, 98.8% messy, every agent handoff caught</li><li>Cost: $289 vs $954 a year</li></ul>
             <p class="stack">PyTorch · MiniLM-L6 · scikit-learn baseline · Groq gpt-oss-120b / 20b · cost model</p>
             <p class="project-foot">Study complete · decision written up</p>
           </article>
@@ -362,17 +329,15 @@
         </div>
         <div class="case-group" id="deep-learning">
           <h3 class="group-title">Deep Learning &amp; Speech</h3>
-          <p class="group-note">Neural models for perception, chosen by measuring them on the product's own data.</p>
+          <p class="group-note">Neural models for sound and images, chosen by testing them on the product's own data.</p>
           <div class="project-grid cases">
-          <article class="project-card">
-            <p class="project-type">Speech AI · Multilingual</p>
+          <article class="project-card case">
+            <p class="project-type">Telecom · Speech AI</p>
             <h4>NovaCell Voice Assist</h4>
-            <p>Voice self-service for a mobile operator's Hindi and Gujarati speakers. A deep-learning speech model (Whisper) transcribes Hindi, Gujarati, Hinglish or English with product words as a hint; the existing grounded assistant answers only from verified content; the reply is translated back with every number checked and read aloud.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>Character error rate: Hindi 11%, Gujarati 18% (from 53% / 61% without a language hint)</li>
-              <li>Wrong-alphabet transcripts: 9 of 20 → 0 with the hint; cheaper turbo model rejected</li>
-              <li>≈ $0.0014 per voice question</li>
-            </ul>
+            <p class="case-line">Voice self-service for Hindi and Gujarati speakers.</p>
+            <dl class="case-facts"><div><dt>Problem</dt><dd>Customers who speak Hindi or Gujarati can't use English-only self-service and wait for an agent instead.</dd></div><div><dt>What I built</dt><dd>A speech model (Whisper) turns the caller's Hindi, Gujarati, Hinglish or English into text, the grounded support assistant answers, and the reply is translated back, with every number checked, and read aloud.</dd></div><div><dt>Key decision</dt><dd>Telling the speech model which language to expect cut errors by 70–80%, and beat switching to a bigger or faster model.</dd></div></dl>
+            <p class="case-label">Results</p>
+            <ul class="metrics" aria-label="Results"><li>Character errors: Hindi 11%, Gujarati 18% (from 53% / 61%)</li><li>Wrong-alphabet transcripts: 9 of 20 → 0</li><li>≈ $0.0014 per voice question</li></ul>
             <p class="stack">Whisper large-v3 (Groq) · gpt-oss-120b / 20b · Node.js · browser speech</p>
             <p class="project-links"><a href="https://novacell-voice-assist.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
           </article>
@@ -380,40 +345,35 @@
         </div>
         <div class="case-group" id="ml">
           <h3 class="group-title">ML, Recommenders &amp; Analytics</h3>
-          <p class="group-note">Predictive models, recommenders and dashboards that drive decisions.</p>
+          <p class="group-note">Models that learn from past data to score, rank and forecast, each tested on later months it never saw.</p>
           <div class="project-grid cases">
-          <article class="project-card">
-            <p class="project-type">Traditional ML + GenAI</p>
+          <article class="project-card case">
+            <p class="project-type">Telecom · Machine learning + GenAI</p>
             <h4>NovaCell Churn Radar</h4>
-            <p>A churn model for a mobile operator's retention team. It ranks customers by expected value saved (churn risk × save rate × margin − offer cost), explains each score with SHAP reasons, picks one approved offer, and drafts a grounded call brief that is checked before an agent sees it.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>3× lift in the top 10% vs 1.25× for today's rule</li>
-              <li>Tested on a later month, after a price rise</li>
-              <li>Call briefs: 100% safe, right offer and injection blocked on 65 live evals</li>
-            </ul>
+            <p class="case-line">Tells the retention team who to call first, why, and what to offer.</p>
+            <dl class="case-facts"><div><dt>Problem</dt><dd>The retention team called customers by a simple rule and often reached people who were leaving anyway or never at risk.</dd></div><div><dt>What I built</dt><dd>A model ranks customers by money saved if called (risk × chance to save × margin − offer cost), explains each score, picks one approved offer, and an LLM drafts a call brief that is checked before an agent sees it.</dd></div><div><dt>Key decision</dt><dd>Rank by value saved, not just risk; the LLM only writes the brief, never picks the offer.</dd></div></dl>
+            <p class="case-label">Results</p>
+            <ul class="metrics" aria-label="Results"><li>3× more churners in the top 10% vs 1.25× for today's rule</li><li>Tested on a later month, after a price rise</li><li>65 live call briefs: 100% safe</li></ul>
             <p class="stack">scikit-learn · SHAP · Node.js · Groq gpt-oss-120b</p>
             <p class="project-links"><a href="https://novacell-churn-radar.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
           </article>
-          <article class="project-card">
-            <p class="project-type">Recommender System</p>
+          <article class="project-card case">
+            <p class="project-type">Telecom · Recommender system</p>
             <h4>NovaCell Plan Recommender</h4>
-            <p>Fit-first plan and add-on recommendations for a mobile operator's app. A hybrid gradient-boosted ranker, trained on real plan changes, suggests up to three options with the reason from each customer's usage and the exact bill change; a guardrail blocks bill shock, a gate stays silent when the plan already fits, and an AI-written message is checked by code.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>87% of real plan changes in the top 3, vs 66% for the agent playbook</li>
-              <li>Bill shock 0.1% vs 62% for the playbook; never a plan that slows 3+ GB of data</li>
-              <li>Revenue trade-off quantified: break-even churn cut for each policy, decided by A/B test</li>
-            </ul>
+            <p class="case-line">Suggests the plan or add-on that actually fits each customer, or nothing at all.</p>
+            <dl class="case-facts"><div><dt>Problem</dt><dd>The app showed one "Upgrade to Unlimited" banner to everyone, while many customers overpaid or paid high roaming charges.</dd></div><div><dt>What I built</dt><dd>A ranking model trained on real plan changes suggests up to three options, each with the reason and the exact bill change. Guardrails block bill shocks and plans too small for the customer's data use; customers whose plan fits see nothing. An AI-written message is checked by code.</dd></div><div><dt>Key decision</dt><dd>Good fits often lower bills. I quantified the revenue trade-off and proposed a three-arm A/B test to decide the policy.</dd></div></dl>
+            <p class="case-label">Results</p>
+            <ul class="metrics" aria-label="Results"><li>87% of real choices in the top 3, vs 66% for the agent playbook</li><li>Bill shock 0.1% vs 62%</li><li>70 live messages: 100% correct</li></ul>
             <p class="stack">scikit-learn ranker · collaborative filtering · Node.js · Groq gpt-oss-120b</p>
             <p class="project-links"><a href="https://novacell-plan-recommender.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
           </article>
-          <article class="project-card">
-            <p class="project-type">Business Analytics</p>
+          <article class="project-card case">
+            <p class="project-type">At work · Analytics</p>
             <h4>Sales Forecasting &amp; Dashboards</h4>
-            <p>Built sales dashboards and forecasting models that gave product and sales leaders cross-channel revenue visibility.</p>
-            <ul class="metrics" aria-label="Key numbers">
-              <li>Forecast accuracy 85% → 91%</li>
-              <li>Informed stock allocation</li>
-            </ul>
+            <p class="case-line">Sales dashboards and forecasts for product and sales leaders.</p>
+            <dl class="case-facts"><div><dt>Problem</dt><dd>Leaders had no single view of revenue across channels.</dd></div><div><dt>What I built</dt><dd>Built sales dashboards and forecasting models across channels.</dd></div></dl>
+            <p class="case-label">Results</p>
+            <ul class="metrics" aria-label="Results"><li>Forecast accuracy: 85% → 91%</li><li>Used to plan stock allocation</li></ul>
             <p class="project-foot">Shipped in production</p>
           </article>
           </div>
@@ -422,17 +382,13 @@
           <h3 class="group-title">AI Product Strategy</h3>
           <p class="group-note">Finding where AI creates value and deciding what to build first.</p>
           <div class="project-grid cases">
-          <article class="project-card">
-            <p class="project-type">AI Product Strategy</p>
+          <article class="project-card case">
+            <p class="project-type">Strategy · Opportunity analysis</p>
             <h4>AI Opportunity Decks</h4>
-            <p>Five AI opportunity analyses of global tech platforms, written as a product owner: each company's business from its latest results, three AI features with the data and metrics they need, Reach × Impact × Confidence ÷ Effort scoring, and an MVP blueprint for the feature to build first.</p>
-            <ul class="metrics" aria-label="Build-first feature per company">
-              <li>LiftLens · ad lift proof</li>
-              <li>Upgrade Concierge · on-device upgrade advisor</li>
-              <li>Fit Twin · size prediction</li>
-              <li>Couch Consensus · group watch picks</li>
-              <li>Pay-per-Task Ads · pay on completed bookings</li>
-            </ul>
+            <p class="case-line">Five AI opportunity analyses of global tech platforms, written as a product owner.</p>
+            <dl class="case-facts"><div><dt>Problem</dt><dd>Big platforms have many possible AI features; the hard part is choosing the first one.</dd></div><div><dt>What I built</dt><dd>For each company: the business from its latest results, three AI features with the data and metrics they need, Reach × Impact × Confidence ÷ Effort scoring, and an MVP plan for the winner.</dd></div></dl>
+            <p class="case-label">Build-first feature per company</p>
+            <ul class="metrics" aria-label="Build-first feature per company"><li>LiftLens · ad lift proof</li><li>Upgrade Concierge · upgrade advisor</li><li>Fit Twin · size prediction</li><li>Couch Consensus · group watch picks</li><li>Pay-per-Task Ads</li></ul>
             <p class="stack">Q3 2026 results · sources in speaker notes</p>
           </article>
           </div>
