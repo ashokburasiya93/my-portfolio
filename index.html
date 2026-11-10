@@ -181,11 +181,28 @@
           <h2>AI products shipped at work and built end to end, each tied to a measurable result.</h2>
           <p class="section-note">Grouped by type of AI product. Projects with a live demo run on synthetic data, and each one was built end to end: user research, AI opportunity map, PRD with a North Star metric, cost model, evaluated prototype and deck.</p>
         </div>
-        <nav class="case-nav" aria-label="Case study categories"><a href="#agents">AI Agents</a><a href="#rag">RAG &amp; Grounded Assistants</a><a href="#fine-tuning">Fine-tuning</a><a href="#deep-learning">Deep Learning &amp; Speech</a><a href="#ml">ML, Recommenders &amp; Analytics</a><a href="#strategy">AI Product Strategy</a></nav>
+        <nav class="case-nav" aria-label="Case study categories"><a href="#agents">AI Agents &amp; Multi-Agent</a><a href="#rag">RAG &amp; Grounded Assistants</a><a href="#fine-tuning">Fine-tuning</a><a href="#deep-learning">Deep Learning &amp; Speech</a><a href="#ml">ML, Recommenders &amp; Analytics</a><a href="#strategy">AI Product Strategy</a></nav>
         <div class="case-group" id="agents">
-          <h3 class="group-title">AI Agents</h3>
+          <h3 class="group-title">AI Agents &amp; Multi-Agent Systems</h3>
           <p class="group-note">Agents that read data, call tools and act, with people approving anything that changes a record.</p>
           <div class="project-grid cases">
+          <article class="project-card featured">
+            <div class="feature-main">
+              <p class="project-type">Telecom · Multi-Agent AI</p>
+              <h4>NovaCell Dispute Desk</h4>
+              <p>A team of AI agents for bill disputes. An Intake agent reads the complaint, an Investigator calls read-only tools (bill, network log, calls, SMS opt-ins, payments), policy code decides the credit, a Writer drafts the reply, a code checker verifies it, and a supervisor approves anything over $50. Tested live against one all-in-one agent and plain rules on the same 36 disputes: the team ties rules on accuracy and finds the refunds rules miss; one agent deciding money over-credited and skipped approvals.</p>
+            </div>
+            <div class="feature-side">
+              <ul class="metrics" aria-label="Key numbers">
+                <li>94.4% decisions correct, $0 over-credited</li>
+                <li>Owed credit missed: $10 vs $142 for rules</li>
+                <li>100% of credits over $50 sent for approval; 5 / 5 hidden instructions resisted</li>
+                <li>≈ $0.0008 per dispute</li>
+              </ul>
+              <p class="stack">Node.js · Groq gpt-oss-120b tool calling · policy-as-code · Vercel</p>
+              <p class="project-links"><a href="https://novacell-dispute-desk.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a></p>
+            </div>
+          </article>
           <article class="project-card featured">
             <div class="feature-main">
               <p class="project-type">Public Sector AI</p>
